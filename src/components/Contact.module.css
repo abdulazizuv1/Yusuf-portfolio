@@ -1,0 +1,117 @@
+.section {
+  padding: 80px 60px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 0% 50%, rgba(232, 0, 13, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left */
+.left { display: flex; flex-direction: column; gap: 28px; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 8vw, 8rem);
+  color: var(--white);
+  letter-spacing: 0.04em;
+  line-height: 0.9;
+}
+
+.desc {
+  font-size: 1.05rem;
+  color: var(--white-dim);
+  line-height: 1.7;
+  max-width: 360px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white-dim);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-fast);
+}
+
+.social:hover { color: var(--red); }
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field { width: 100%; }
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.25);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 12px 0;
+  outline: none;
+  transition: border-color var(--transition-fast);
+  resize: none;
+}
+
+.input::placeholder { color: rgba(245, 245, 245, 0.35); }
+.input:focus { border-bottom-color: var(--red); }
+
+.errorMsg {
+  color: var(--red);
+  font-size: 0.9rem;
+}
+
+.submitBtn {
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  padding: 16px 40px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background var(--transition-fast);
+  min-width: 200px;
+}
+
+.submitBtn:hover:not(:disabled) { background: var(--red-dark); }
+.submitBtn:disabled { opacity: 0.7; cursor: default; }
+
+@media (max-width: 1024px) {
+  .section { padding: 80px 32px; }
+  .inner { gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 20px; }
+  .inner { grid-template-columns: 1fr; gap: 48px; }
+}

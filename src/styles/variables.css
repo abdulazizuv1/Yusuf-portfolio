@@ -1,0 +1,19 @@
+:root {
+  --red:        #E8000D;
+  --red-dark:   #9B0009;
+  --red-glow:   rgba(232, 0, 13, 0.35);
+  --black:      #080808;
+  --black-soft: #111111;
+  --white:      #F5F5F5;
+  --white-dim:  rgba(245, 245, 245, 0.6);
+  --stripe-gap: 28px;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Barlow Condensed', sans-serif;
+
+  --nav-height: 72px;
+  --nav-height-shrunk: 52px;
+
+  --transition-fast: 0.2s ease;
+  --transition-med:  0.3s ease;
+}

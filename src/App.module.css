@@ -1,0 +1,32 @@
+.main {
+  position: relative;
+  z-index: 1;
+  padding: 100px 16px 16px; /* top = navbar height + gap */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1480px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card {
+  background: var(--black);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.footerCard {
+  border-radius: 40px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 84px 10px 10px;
+    gap: 10px;
+  }
+
+  .card {
+    border-radius: 24px;
+  }
+}
